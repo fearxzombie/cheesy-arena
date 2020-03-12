@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+<head>
+<title>Cheesy Arena - Event Wizard</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="event_wizard_stylesheet.css" />
+<style>
+
+body
+{ 
+    margin: 48px; 
+    font-size:100%;
+    font-family: arial, sans;
+    background-color: #FFF;
+}
+
+.legal
+{
+    text-align:center;
+    font-size: 80%;
+    color: #666;
+}
+
+.darken
+{
+	backround-color:#EEE;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function loadit( element)
+{
+
+	var tabs=document.getElementById('tabs').getElementsByTagName("a");
+	for (var i=0; i < tabs.length; i++)
+	{
+		if(tabs[i].href == element.href) 
+			tabs[i].className="selected";
+		else
+			tabs[i].className="";
+	}
+}
+
+</script>
+
+
+</head>
+
+
+<body>
+<div id="content">
+
+<h1>Cheesy Arena - Event Wizard</h1>
+
+<p>This wizard is to assist event Scorekeepers to be able to go through the event process in a linear fashion. </p>
+<div id="tabs">
+<ul>
+     <li><a href="setup_settings.html" class="selected" target="mainFrame"  onclick="loadit(this)" >Event Setup</a></li>
+     <li><a href="setup_teams.html" target="mainFrame"  onclick="loadit(this)" >Team Import</a></li>
+     <li><a href="setup_schedule.html" target="mainFrame" onclick="loadit(this)" >Schedule Generation</a></li>
+     <li><a href="match_play.html" target="mainFrame" onclick="loadit(this)" >Match Play</a></li>
+     <li><a href="alliance_selection.html" target="mainFrame" onclick="loadit(this)" >Alliance Selection</a></li>
+     <li><a href="setup_awards.html" target="mainFrame" onclick="loadit(this)" >Awards Ceremony</a></li>
+</ul>
+</div>
+
+
+<p><br>
+  <br>
+</p>
+</div>
+</body>
+</html>
